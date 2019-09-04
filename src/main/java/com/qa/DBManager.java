@@ -52,12 +52,11 @@ public class DBManager extends Constants {
 
         System.out.println("enter table name: ");
         String tableName = read.nextLine();
-        System.out.println("enter fields to be read: ");
-        String fields = read.nextLine();
+
 
         System.out.println("creating statement");
 
-        String sql2 = "SELECT " +fields + " FROM " +tableName;
+        String sql2 = "SELECT*FROM " +tableName;
         try {
             stmt.execute(sql2);
         } catch (SQLException e) {
