@@ -28,14 +28,16 @@ public class DBManager extends Constants {
         Scanner create = new Scanner(System.in);
         System.out.print("enter table name: ");
         String tableName = create.nextLine();
-        System.out.println("enter fields to be created: ");
-        String fields = create.nextLine();
-        System.out.println("enter the values of the fields: ");
-        String values = create.nextLine();
+        System.out.println("enter the heros name(at work): ");
+        String heroName = create.nextLine();
+        System.out.println("enter the first issue the hero appeared in or first stared in: ");
+        String issueOne = create.nextLine();
+        System.out.println("enter a hero description: ");
+        String description = create.nextLine();
 
         System.out.println("Inserting records into the table...");
 
-        String sql = "INSERT INTO "+tableName+" ("+fields+") VALUES("+values+  " )";
+        String sql = "INSERT INTO "+tableName+" (heroName, issueOne, description ) VALUES('"+heroName+"', '"+issueOne+"', '"+description +"'   )";
         try {
             stmt.executeUpdate(sql);
         } catch (SQLException e) {
